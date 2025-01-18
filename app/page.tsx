@@ -1,4 +1,4 @@
-import { ToggleTheme } from "@/components/theme-toggle";
+import { Hero } from "@/components/hero";
 
 export default async function Home() {
   // const res = await fetch(
@@ -7,7 +7,7 @@ export default async function Home() {
   // const data = await res.json();
   return (
     <div>
-      <ToggleTheme />
+      <Hero />
     </div>
   );
 }

@@ -11,12 +11,12 @@ export function ToggleTheme() {
   return (
     <div
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="absolute top-2 right-2 hover:cursor-pointer"
+      className="absolute top-2 right-2 h-fit hover:cursor-pointer"
     >
       {theme === "dark" ? (
-        <Icons.sun className="h-10 w-10 " />
+        <Icons.sun className="h-8 w-8 " />
       ) : (
-        <Icons.moon className="h-10 w-10 " />
+        <Icons.moon className="h-8 w-8 " />
       )}
       <span className="sr-only">Toggle Theme</span>
     </div>
