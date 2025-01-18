@@ -36,7 +36,7 @@ export default async function Home() {
     <main className="flex flex-col space-y-3 ">
       <Hero />
       <Statistics data={stats} />
-      <Section>
+      <Section className="px-4 pt-8">
         <DataTable columns={columns} data={data.users} />
       </Section>
     </main>
