@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Statistics } from "./statistics";
+import { Statistics } from "../statistics";
 
 export const Hero = () => {
   return (

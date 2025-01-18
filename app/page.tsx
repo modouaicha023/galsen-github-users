@@ -1,4 +1,4 @@
-import { Hero } from "@/components/hero";
+import { Hero } from "@/components/sections/hero";
 
 export default async function Home() {
   // const res = await fetch(
