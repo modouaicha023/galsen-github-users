@@ -6,8 +6,10 @@ interface SectionProps {
   className?: string;
 }
 
-const Section = ({ children, className }: SectionProps) => {
-  return <div className={cn("", className)}>{children}</div>;
+export const Section = ({ children, className }: SectionProps) => {
+  return (
+    <section className={cn("container max-w-[1024px] mx-auto", className)}>
+      {children}
+    </section>
+  );
 };
-
-export default Section;
