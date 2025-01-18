@@ -116,7 +116,7 @@ export const Icons = {
           <stop offset="0" stopColor="#ef6c00">
             {" "}
           </stop>{" "}
-          <stop offset="1" stopColor="#ef6c00" stop-opacity="0">
+          <stop offset="1" stopColor="#ef6c00" stopOpacity="0">
             {" "}
           </stop>{" "}
         </radialGradient>{" "}
@@ -139,7 +139,7 @@ export const Icons = {
           <stop offset="0" stopColor="#ef6c00">
             {" "}
           </stop>{" "}
-          <stop offset="1" stopColor="#ef6c00" stop-opacity="0">
+          <stop offset="1" stopColor="#ef6c00" stopOpacity="0">
             {" "}
           </stop>{" "}
         </radialGradient>{" "}
