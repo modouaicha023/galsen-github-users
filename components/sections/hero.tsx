@@ -1,39 +1,47 @@
-import Image from "next/image";
-import { Statistics } from "../statistics";
+import { Section } from "@/components/ui/section";
+import AnimatedGradientText from "@/components//ui/animated-gradient-text";
 
 export const Hero = () => {
   return (
-    <section id="about" className="container py-24 sm:py-32">
-      <div className="bg-muted/50 border rounded-lg py-12">
-        <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
-          <Image
-            src={"/pilot.png"}
-            alt=""
-            width={100}
-            height={100}
-            className="w-[300px] object-contain rounded-lg"
-          />
-          <div className="bg-green-0 flex flex-col justify-between">
-            <div className="pb-6">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                  About{" "}
-                </span>
-                Company
-              </h2>
-              <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
-              </p>
-            </div>
-
-            <Statistics />
-          </div>
+    <Section className="flex flex-col items-center rounded-lg pt-12 pb-2">
+      <div>
+        <div className="flex justify-center">
+          <a
+            className="inline-flex items-center gap-x-2 border text-sm p-1 ps-3 rounded-full transition"
+            href="https://github.com/modouaicha023/galsen-github-users"
+            target="_blank"
+          >
+            Open source - Contribuez
+            <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-muted-foreground/15 font-semibold text-sm">
+              <svg
+                className="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div className="mt-5 max-w-2xl text-center mx-auto">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            <AnimatedGradientText text="Galsen GitHub Stats" />
+          </h1>
+        </div>
+        <div className="mt-5 max-w-3xl text-center mx-auto">
+          <p className="text-xl text-muted-foreground">
+            Visualisez les profils des développeurs sénégalais, leurs langages
+            de programmation préférés, et leurs contributions.
+          </p>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
