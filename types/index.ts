@@ -1,19 +1,19 @@
-export interface User {
-  avatarUrl: string;
-  contributionsCollection: {
-    contributionCalendar: {
-      totalContributions: number;
-    };
-    restrictedContributionsCount: number;
-    totalCommitContributions: number;
-  };
-  createdAt: Date;
-  location: string;
-  login: string;
-  name: string;
-}
+// export interface User {
+//   avatarUrl: string;
+//   contributionsCollection: {
+//     contributionCalendar: {
+//       totalContributions: number;
+//     };
+//     restrictedContributionsCount: number;
+//     totalCommitContributions: number;
+//   };
+//   createdAt: Date;
+//   location: string;
+//   login: string;
+//   name: string;
+// }
 
-export interface UserDetail {
+export interface User {
   avatarUrl: string;
   bio: string;
   contributionsCollection: {

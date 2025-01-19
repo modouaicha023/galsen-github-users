@@ -11,6 +11,7 @@ export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "avatarUrl",
     header: "Photo",
+    id: "Photo",
     cell: ({ row }) => {
       return (
         <Image
@@ -32,11 +33,12 @@ export const columns: ColumnDef<User>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Prénom(s) et Nom
-          <ArrowUpDown className="ml-2 h-4 w-4" />
+          Nom
+          <ArrowUpDown className="h-3 w-3" />
         </Button>
       );
     },
+    id: "Nom",
     cell: ({ row }) => {
       return (
         <span className="rounded-md max-w-4 break-words text-wrap">
@@ -47,12 +49,13 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "login",
-    header: "Username",
+    header: "@github",
+    id: "Username",
     cell: ({ row }) => {
       return (
         <a
           href={`https://github.com/${row.original.login}`}
-          className="rounded-md max-w-4 text-wrap hover:underline"
+          className="rounded-md max-w-2 text-wrap hover:underline"
           target="_blank"
         >
           @{row.original.login.toLowerCase()}
@@ -63,7 +66,18 @@ export const columns: ColumnDef<User>[] = [
   {
     accessorKey:
       "contributionsCollection.contributionCalendar.totalContributions",
-    header: "Contributions Totales",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Contributions Totales
+          <ArrowUpDown className="ml-1 h-4 w-4" />
+        </Button>
+      );
+    },
+    id: "Contributions Totales",
     cell: ({ row }) => {
       return (
         <span className="flex gap-x-2 items-center justify-center">
@@ -78,7 +92,18 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "contributionsCollection.totalCommitContributions",
-    header: "Totals de commits",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Totals de commits
+          <ArrowUpDown className="ml-1 h-4 w-4" />
+        </Button>
+      );
+    },
+    id: "Totals de commits",
     cell: ({ row }) => {
       return (
         <span className="flex gap-x-2 items-center justify-center">
@@ -90,7 +115,19 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "contributionsCollection.restrictedContributionsCount",
-    header: "Contributions privées",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Contributions privées
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    id: "Contributions privées",
+
     cell: ({ row }) => {
       return (
         <span className="flex gap-x-2 items-center justify-center">
@@ -100,4 +137,19 @@ export const columns: ColumnDef<User>[] = [
       );
     },
   },
+  // {
+  //   accessorKey: "most_used_languages",
+  //   header: "Langages",
+  //   id: "most_used_languages",
+  //   cell: ({ row }) => {
+  //     return (
+  //       <span className="flex gap-x-2 items-center justify-center">
+  //         <Icons.incognito className="h-4 w-4" />{" "}
+  //         {row.original.most_used_languages.map((langage) => (
+  //           <span key={langage}>{langage}</span>
+  //         ))}
+  //       </span>
+  //     );
+  //   },
+  // },
 ];
