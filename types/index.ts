@@ -73,3 +73,7 @@ export enum ProgrammingLanguage {
   COBOL = "COBOL",
   Fortran = "Fortran",
 }
+
+export interface StatisticsProps {
+  data: { quantity: number; description: string; subtitle: string }[];
+}

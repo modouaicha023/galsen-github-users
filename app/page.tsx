@@ -16,24 +16,9 @@ export default async function Home() {
       description: "Devs Sénégalais",
       subtitle: "sur GitHub",
     },
-    {
-      quantity: "250+",
-      description: "Repositories",
-      subtitle: "créés en 2024",
-    },
-    {
-      quantity: "15+",
-      description: "Tech Hubs",
-      subtitle: "à Dakar",
-    },
-    {
-      quantity: "6",
-      description: "Top Languages",
-      subtitle: "Python, JS, Java, PHP, Go, Ruby",
-    },
   ];
   return (
-    <main className="flex flex-col space-y-3 ">
+    <main className="flex flex-col space-y-3 relative ">
       <Hero />
       <Statistics data={stats} />
       <Section className="px-4 pt-8">
