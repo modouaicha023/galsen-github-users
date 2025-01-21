@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CountAnimation({
   number,
@@ -13,6 +13,11 @@ export default function CountAnimation({
 }) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const animation = animate(count, number, { duration: 2 });

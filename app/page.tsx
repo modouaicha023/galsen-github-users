@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/hero";
 import { Statistics } from "@/components/statistics";
-import { columns } from "./users/columns";
-import { DataTable } from "./users/data-table";
+import { columns } from "../components/tables/columns";
+import { DataTable } from "../components/tables/data-table";
 import { Section } from "@/components/ui/section";
 
 export default async function Home() {
