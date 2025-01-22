@@ -137,19 +137,4 @@ export const columns: ColumnDef<User>[] = [
       );
     },
   },
-  // {
-  //   accessorKey: "most_used_languages",
-  //   header: "Langages",
-  //   id: "most_used_languages",
-  //   cell: ({ row }) => {
-  //     return (
-  //       <span className="flex gap-x-2 items-center justify-center">
-  //         <Icons.incognito className="h-4 w-4" />{" "}
-  //         {row.original.most_used_languages.map((langage) => (
-  //           <span key={langage}>{langage}</span>
-  //         ))}
-  //       </span>
-  //     );
-  //   },
-  // },
 ];

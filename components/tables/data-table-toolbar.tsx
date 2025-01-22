@@ -6,9 +6,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-// import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 import { DataTableViewOptions } from "./data-table-view-options";
-// import { ProgrammingLanguage } from "@/types";
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -18,7 +16,6 @@ export function DataTableToolbar<TData>({
   table,
 }: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0;
-//   const most_used_languages = Object.values(ProgrammingLanguage);
 
   return (
     <div className="flex items-center justify-between">
@@ -32,14 +29,6 @@ export function DataTableToolbar<TData>({
           }
           className="h-8 w-[150px] lg:w-[250px]"
         />
-        {/* {table.getColumn("most_used_languages") && (
-          <DataTableFacetedFilter
-            column={table.getColumn("most_used_languages")}
-            title="Langages"
-            options={most_used_languages}
-          />
-        )} */}
-
         {isFiltered && (
           <Button
             variant="ghost"
