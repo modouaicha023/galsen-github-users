@@ -11,19 +11,17 @@ export default function CountAnimation({
   number: number;
   className: string;
 }) {
-  const count = useMotionValue(0);
+  const [initialNumber, setInitialNumber] = useState(0);
+  const count = useMotionValue(initialNumber);
+
   const rounded = useTransform(count, Math.round);
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
+    setInitialNumber(number);
     const animation = animate(count, number, { duration: 2 });
 
     return animation.stop;
-  }, []);
+  }, [number]);
 
   return <motion.h1 className={cn(className)}>{rounded}</motion.h1>;
 }

@@ -5,16 +5,16 @@ import { useTheme } from "next-themes";
 import { Icons } from "./icons";
 
 export function ToggleTheme() {
-  const { setTheme, theme } = useTheme();
-
- 
+  const { setTheme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+  const currentTheme = resolvedTheme || theme;
 
   return (
     <div
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
       className="absolute top-2 right-2 h-fit hover:cursor-pointer"
     >
-      {theme === "dark" ? (
+      {currentTheme === "dark" ? (
         <Icons.sun className="h-8 w-8 " />
       ) : (
         <Icons.moon className="h-8 w-8 " />
