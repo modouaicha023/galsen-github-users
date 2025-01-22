@@ -8,7 +8,7 @@ export const Statistics = ({ data }: StatisticsProps) => {
       {data.map(({ quantity, description, subtitle }) => (
         <div
           key={description}
-          className="text-center w-fit flex items-center justify-center"
+          className="text-center w-fit flex gap-4 items-center justify-center"
         >
           <Icons.gihub2 />
           +<CountAnimation number={quantity} className="text-4xl w-4" />
