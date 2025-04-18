@@ -12,7 +12,7 @@ export function ToggleTheme() {
   return (
     <div
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      className="absolute top-2 right-2 h-fit hover:cursor-pointer"
+      className="h-fit ml-auto hover:cursor-pointer border border-green"
     >
       {currentTheme === "dark" ? (
         <Icons.sun className="h-8 w-8 " />
